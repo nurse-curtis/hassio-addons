@@ -12,7 +12,6 @@ RUN \
         libuv-dev \
         openssl-dev \
         zlib-dev \
-	python3-dev
     
 RUN \
 	apk add --no-cache \
