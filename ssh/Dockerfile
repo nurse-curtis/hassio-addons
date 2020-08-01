@@ -1,4 +1,4 @@
-FROM homeassistant/armhf-base:3.10
+FROM homeassistant/amd64-base:3.10
 
 # Setup base
 ARG LIBWEBSOCKETS_VERSION
