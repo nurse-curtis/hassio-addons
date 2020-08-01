@@ -1,6 +1,7 @@
 FROM homeassistant/amd64-base:3.12
 
 # Setup base
+ARG BUILD_ARCH="amd64"
 ARG CLI_VERSION="4.3.0"
 ARG LIBWEBSOCKETS_VERSION="v3.2.2"
 ARG TTYD_VERSION="1.6.0"
