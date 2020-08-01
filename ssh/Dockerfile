@@ -12,9 +12,10 @@ RUN \
         libuv-dev \
         openssl-dev \
         zlib-dev \
-	python3-dev \
-    \
-    && apk add --no-cache \
+	python3-dev
+    
+RUN \
+	apk add --no-cache \
         bash-completion \
         pulseaudio-utils \
         alsa-plugins-pulse \
@@ -35,9 +36,9 @@ RUN \
 	htop \
 	bind-tools \
 	mc \
-	device-mapper-libs \
-    \
-    && sed -i "s/ash/bash/" /etc/passwd \
+	device-mapper-libs
+RUN \
+    sed -i "s/ash/bash/" /etc/passwd \
     \
     && git clone --branch "${LIBWEBSOCKETS_VERSION}" --depth=1 \
         https://github.com/warmcat/libwebsockets.git /tmp/libwebsockets \
