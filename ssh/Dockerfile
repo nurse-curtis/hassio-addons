@@ -4,8 +4,7 @@ FROM homeassistant/armhf-base:3.10
 ARG LIBWEBSOCKETS_VERSION
 ARG TTYD_VERSION
 RUN \
-	apk update \
-    && apk add --no-cache --virtual .build-dependencies \
+	apk add --no-cache --virtual .build-dependencies \
         bsd-compat-headers \
         build-base \
         cmake \
@@ -13,7 +12,7 @@ RUN \
         libuv-dev \
         openssl-dev \
         zlib-dev \
-		python3-dev \
+	python3-dev \
     \
     && apk add --no-cache \
         bash-completion \
@@ -27,16 +26,16 @@ RUN \
         pwgen \
         tmux \
         vim \
-		rsync \
-		mariadb-client \
-		curl \
-		python3 \
-		nmap \
-		docker \
-		htop \
-		bind-tools \
-		mc \
-		device-mapper-libs \
+	rsync \
+	mariadb-client \
+	curl \
+	python3 \
+	nmap \
+	docker \
+	htop \
+	bind-tools \
+	mc \
+	device-mapper-libs \
     \
     && sed -i "s/ash/bash/" /etc/passwd \
     \
