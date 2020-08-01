@@ -5,7 +5,7 @@
   "description": "Allow logging in remotely to Home Assistant using SSH",
   "url": "https://github.com/home-assistant/hassio-addons/tree/master/ssh",
   "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
-  "init": false,
+  "init": true,
   "advanced": true,
   "startup": "services",
   "ingress": true,
@@ -33,6 +33,5 @@
     "server": {
       "tcp_forwarding": "bool"
     }
-  },
-  "image": "nursecurtis/addon-ssh"
+  }
 }
