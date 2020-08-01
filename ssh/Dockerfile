@@ -1,8 +1,9 @@
 FROM homeassistant/amd64-base:3.12
 
 # Setup base
-ARG LIBWEBSOCKETS_VERSION
-ARG TTYD_VERSION
+ARG CLI_VERSION="4.3.0"
+ARG LIBWEBSOCKETS_VERSION="v3.2.2"
+ARG TTYD_VERSION="1.6.0"
 RUN \
 	apk update && \
 	apk add --no-cache \
