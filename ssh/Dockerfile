@@ -69,7 +69,6 @@ RUN \
     && make \
     && make install \
     \
-    && apk del --no-cache --purge .build-dependencies \
     && rm -f -r \
         /root/.cache \
         /root/.cmake \
