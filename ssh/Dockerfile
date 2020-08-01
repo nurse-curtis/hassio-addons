@@ -1,10 +1,10 @@
-FROM homeassistant/amd64-base:3.10
+FROM homeassistant/amd64-base:3.12
 
 # Setup base
 ARG LIBWEBSOCKETS_VERSION
 ARG TTYD_VERSION
 RUN \
-	apk add --no-cache --virtual .build-dependencies \
+	apk add --no-cache \
         bsd-compat-headers \
         build-base \
         cmake \
