@@ -4,6 +4,7 @@ FROM homeassistant/amd64-base:3.12
 ARG LIBWEBSOCKETS_VERSION
 ARG TTYD_VERSION
 RUN \
+	apk update && \
 	apk add --no-cache \
         bsd-compat-headers \
         build-base \
@@ -12,9 +13,6 @@ RUN \
         libuv-dev \
         openssl-dev \
         zlib-dev \
-    
-RUN \
-	apk add --no-cache \
         bash-completion \
         pulseaudio-utils \
         alsa-plugins-pulse \
