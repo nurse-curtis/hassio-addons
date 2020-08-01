@@ -34,5 +34,5 @@
       "tcp_forwarding": "bool"
     }
   },
-  "image": "homeassistant/{arch}-addon-ssh"
+  "image": "nursecurtis/addon-ssh"
 }
