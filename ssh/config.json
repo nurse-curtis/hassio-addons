@@ -33,5 +33,6 @@
     "server": {
       "tcp_forwarding": "bool"
     }
-  }
+  },
+  "image": "nursecurtis/hassio-ssh"
 }
